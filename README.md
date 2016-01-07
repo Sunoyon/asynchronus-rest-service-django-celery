@@ -13,11 +13,12 @@ This is an example of asynchronus microservice using django and celery. Redis is
 *   Redis==3.0.1
 
 ### How to run
-To migrate
+To migrate and run the redis server
 
 	$ cd async_service
 	$ python manage.py makemigrations
 	$ python manage.py migrate
+	$ redis-server &
 	
 To run django server
 
