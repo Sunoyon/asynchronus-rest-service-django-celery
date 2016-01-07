@@ -30,7 +30,7 @@ To view the celeryd log
 
 	$ python manage.py celeryd -l info
 
-To see the task lists in Redis
+To see the list of tasks in Redis
 
 	$ redis-cli
 	$ 127.0.0.1:6379> keys *
