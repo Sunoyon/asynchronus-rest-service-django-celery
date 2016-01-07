@@ -84,15 +84,10 @@ WSGI_APPLICATION = site_dir + '.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-a_host = open(os.path.join(BASE_DIR, "host")).read().strip()
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'proxy',
-        'USER': 'widespace',
-        'PASSWORD': 'etl20',
-        'HOST': a_host if a_host else '127.0.0.1',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'pingdb',
     }
 }
 
