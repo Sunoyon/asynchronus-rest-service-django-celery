@@ -3,7 +3,7 @@
 
 ## Introduction
 
-This is an example of asynchronus microservice using django and celery. Redis is used as broker.
+This is an example of asynchronus microservice using django and celery. Redis is used as task broker. Celery worker-node acts as a consumer of the task broker and runs the tasks. Therefore no callback scenario is available in this approach.
 
 
 ### Prerequisite
