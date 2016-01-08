@@ -23,13 +23,15 @@ To migrate for django and run the redis server
 To run django server
 
 	$ python manage.py runserver
+	
+To run the celeryd using django manage.py
+
+	$ python manage.py celeryd -l info
+	
 Curl to the endpoint
 
 	$ curl -i http://localhost:8000/ping/
-To view the celeryd log
-
-	$ python manage.py celeryd -l info
-
+	
 To see the list of tasks in Redis
 
 	$ redis-cli
