@@ -10,7 +10,11 @@ This is an example of asynchronus microservice using django and celery. Redis is
 
 *   Django==1.9.1
 *   Celery==3.1.19 (Cipater)
-*   Redis==3.0.1
+*   Redis==2.10.6
+
+Run
+	
+	$ pip install async_service/requirements.pip 
 
 ### How to run
 To migrate for django and run the redis server
@@ -23,6 +27,7 @@ To migrate for django and run the redis server
 To run django server
 
 	$ python manage.py runserver
+	$ python manage.py createsuperuser
 	
 To run the celeryd using django manage.py
 
@@ -37,7 +42,11 @@ To see the list of tasks in Redis
 	$ redis-cli
 	$ 127.0.0.1:6379> keys *
 
+To resolve errors that might pop up
 
-
-
- 
+	* To resolve "django.templatetags.future" error in >=1.9 Django versions, remove "/lib/python2.7/dist-packages/django/templatetags/future.py" and "/lib/python2.7/dist-packages/django/templatetags/future.pyc" files situated in "/usr/local" or "~/.local" directories.
+	* To resolve "AttributeError: 'unicode' object has no attribute 'iteritems" in "/site-packages/redis/_compat.py", install redis==2.0.1 instead of redis==3.0.1.
+		$ pip uninstall redis
+		$ pip install redis==2.10.6
+	* Install django-celery if unidentified celery package error is coming up after "pip install 
+		$ pip install django-celery
