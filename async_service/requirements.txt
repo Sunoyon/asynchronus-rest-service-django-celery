@@ -1,3 +1,8 @@
-Django==1.9.1
-Celery==3.1.19
-Redis==3.0.1
+amqp-1.4.9
+anyjson-0.3.3
+billiard-3.3.0.23
+celery-3.1.26.post2
+django-1.11.25
+django-celery-3.3.1
+kombu-3.0.37
+pytz-2019.3
